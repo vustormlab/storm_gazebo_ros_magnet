@@ -34,4 +34,5 @@ To run the example in the worlds/ directory run
 $ rosrun gazebo_ros gazebo dipole_magnet.world
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Lw2KfwgySWI" frameborder="0" allowfullscreen></iframe>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Lw2KfwgySWI" target="_blank"><img src="http://img.youtube.com/vi/Lw2KfwgySWI/0.jpg" 
+alt="Magnet simulation in Gazebo" width="480" height="360" border="10" /></a>
