@@ -13,5 +13,5 @@ The magnitude of dipole moment of a cylindrical magnet can be computed using the
 
         dm_mag = B_max * 4*pi * (h/2)^3/(2*mu_0) 
 
-Where `B_max` is the remanence of the magnet, `h` is the height and `mu_0`=4*pi*1e-7 is the permeability constant.
+Where `B_max` is the remanence of the magnet, `h` is the height and `mu_0=4*pi*1e-7` is the permeability constant.
 
