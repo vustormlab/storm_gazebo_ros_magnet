@@ -1,0 +1,147 @@
+<?xml version="1.0"?> 
+<sdf version="1.4">
+  <world name="default">
+
+    <!-- Ground Plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <model name="plane">
+      <pose>0 0 0.9 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 1 0.02</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1 0.02</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>1 0 0 1</ambient>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="plane2">
+      <pose>0 0 0.975 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 1 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1 0.05</size>
+            </box>
+          </geometry>
+          <transparency>0.5</transparency>
+          <material>
+            <diffuse>0 0 1 0.1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="actuator_magnet">
+      <pose>0 0 1.05 0 0 0</pose>
+      <static>true</static>
+      <link name="magnet">
+        <inertial>
+          <mass>4.0</mass>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>0.05</radius>
+              <length>0.1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.05</radius>
+              <length>0.1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <diffuse>0.1 0.1 0.1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <emissive>0.5 0.5 0.5 0.1</emissive>
+          </material>
+        </visual>
+      </link>
+      <plugin name="dipole_magnet" filename="libstorm_gazebo_dipole_magnet.so">
+          <bodyName>magnet</bodyName>
+          <dipole_moment>0 0 970</dipole_moment>
+          <xyzOffset>0 0 0</xyzOffset>
+      </plugin>
+    </model>        
+
+    <model name="capsule_magnet">
+      <pose>0.08 0 0.925 0 0 0</pose>
+      <link name="magnet">
+        <inertial>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>1.8e-7</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.8e-7</iyy>
+            <iyz>0</iyz>
+            <izz>1.543e-7</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <cylinder>
+              <radius>0.005</radius>
+              <length>0.01</length>
+            </cylinder>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.005</radius>
+              <length>0.01</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+
+      <plugin name="dipole_magnet" filename="libstorm_gazebo_dipole_magnet.so">
+        <bodyName>magnet</bodyName>
+        <dipole_moment>0 0 1.26</dipole_moment>
+        <!-- Set to false if not using ROS -->
+        <shouldPublish>true</shouldPublish>
+        <topicNs>capsule</topicNs>
+        <updateRate>100</updateRate>
+      </plugin>
+    </model>
+
+  </world>
+</sdf>
