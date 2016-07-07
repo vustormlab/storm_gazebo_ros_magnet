@@ -15,3 +15,23 @@ The magnitude of dipole moment of a cylindrical magnet can be computed using the
 
 Where `B_max` is the remanence of the magnet, `h` is the height and `mu_0=4*pi*1e-7` is the permeability constant.
 
+
+## Building the plugin
+
+The plugin is a ros package so the build process is the same as any other package.
+
+```bash
+$ cd ~/catkin_ws/src
+$ git clone https://github.com/azeey/storm_gazebo_ros_magnet.git
+$ catkin_make -C ~/catkin_ws
+```
+
+## Running Example
+
+To run the example in the worlds/ directory run
+
+```
+$ rosrun gazebo_ros gazebo dipole_magnet.world
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lw2KfwgySWI" frameborder="0" allowfullscreen></iframe>
