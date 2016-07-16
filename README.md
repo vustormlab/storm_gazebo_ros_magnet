@@ -22,7 +22,7 @@ The plugin is a ros package so the build process is the same as any other packag
 
 ```bash
 $ cd ~/catkin_ws/src
-$ git clone https://github.com/azeey/storm_gazebo_ros_magnet.git
+$ git clone https://github.com/vustormlab/storm_gazebo_ros_magnet.git
 $ catkin_make -C ~/catkin_ws
 ```
 
