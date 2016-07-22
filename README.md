@@ -36,3 +36,19 @@ $ rosrun gazebo_ros gazebo dipole_magnet.world
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Lw2KfwgySWI" target="_blank"><img src="http://img.youtube.com/vi/Lw2KfwgySWI/0.jpg" 
 alt="Magnet simulation in Gazebo" width="480" height="360" border="10" /></a>
+
+## References
+
+If you use this work, please cite our [RSS 2016 paper](http://www.roboticsproceedings.org/rss12/p18.html):
+
+```
+@INPROCEEDINGS{Taddese-RSS-16, 
+    AUTHOR    = {Addisu Z. Taddese AND Piotr R. Slawinski AND Keith L. Obstein AND Pietro Valdastri}, 
+    TITLE     = {Closed Loop Control of a Tethered Magnetic Capsule Endoscope}, 
+    BOOKTITLE = {Proceedings of Robotics: Science and Systems}, 
+    YEAR      = {2016}, 
+    ADDRESS   = {AnnArbor, Michigan}, 
+    MONTH     = {June}, 
+    DOI       = {10.15607/RSS.2016.XII.018} 
+} 
+```
