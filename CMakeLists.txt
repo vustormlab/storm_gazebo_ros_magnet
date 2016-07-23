@@ -4,7 +4,6 @@ project(storm_gazebo_magnet)
 find_package(catkin REQUIRED COMPONENTS 
   roscpp 
   geometry_msgs 
-  magnetic_field_models
   )
 find_package(gazebo REQUIRED)
 include_directories(include ${GAZEBO_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
