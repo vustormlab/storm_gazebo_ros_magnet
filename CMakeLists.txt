@@ -12,6 +12,7 @@ link_directories(${GAZEBO_LIBRARY_DIRS})
 find_package(gazebo REQUIRED)
 find_package(Boost REQUIRED COMPONENTS thread)
 # set (CMAKE_CXX_FLAGS "-std=c++11")
+add_definitions(-std=c++11)
 list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS} -O2")
 
 
