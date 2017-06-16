@@ -28,7 +28,7 @@
 #include <vector>
 #include <cstdint>
 
-#include "storm_gazebo_ros_magnet/dipole_magnet.h"
+#include <storm_gazebo_ros_magnet/dipole_magnet.h>
 
 namespace gazebo {
 
@@ -185,6 +185,8 @@ void DipoleMagnet::OnUpdate(const common::UpdateInfo & /*_info*/) {
 
   if (!this->mag->calculate)
     return;
+
+
 
   DipoleMagnetContainer& dp = DipoleMagnetContainer::Get();
 
