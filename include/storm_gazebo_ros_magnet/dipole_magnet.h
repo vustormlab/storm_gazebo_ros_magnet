@@ -29,7 +29,7 @@
 
 #include <memory>
 
-#include "storm_gazebo_ros_magnet/dipole_magnet_container.h"
+#include <storm_gazebo_ros_magnet/dipole_magnet_container.h>
 
 namespace gazebo {
 
